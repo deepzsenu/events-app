@@ -1,97 +1,124 @@
-import { View, Text,StyleSheet,TouchableOpacity,TextInput } from 'react-native'
-import React, { useState } from 'react';
-import mainColors from '../staticNames/colors'
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
+
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+
+import React, { useState } from "react";
+import mainColors from "../staticNames/colors";
 
 export default function Verification() {
-  const [inputValue, setInputValue] = useState("");  // Define and initialize state
-
-  const onChangeText = (text) => {
-    setInputValue(text);  // Update the state with the new text
-  };
+  const [text, setText] = useState("");
   return (
     <View style={styles.container}>
       <View>
-
+            <Text >
+            <FontAwesomeIcon  style={styles.textIcon}
+            icon={faMobileAlt}
+            size={50}  // Change the size as needed
+            color={mainColors.britishRacingGreen}
+            />
+            </Text>
       </View>
       <View>
-        <Text style={styles.text} >Verification</Text>
+        <Text style={styles.text}>Verification</Text>
       </View>
       <View style={styles.textVerficationDiv}>
-        <Text style={styles.textVerfication} >we will send you <Text style={styles.textVerficationBold} >One Time Password </Text>on your Phone number</Text>
+        <Text style={styles.textVerfication}>
+          We will send you
+          <Text style={styles.textVerficationBold}> One Time Password </Text>on
+          your Phone number
+        </Text>
       </View>
 
-      <View>
-        
-      </View>
+      <View></View>
       <View style={styles.buttonVerification}>
-      <TextInput
-        editable
-        multiline
-        numberOfLines={4}
-        maxLength={40}
-        onChangeText={text => onChangeText(text)}
-        value={value}
-        style={{padding: 10}}
-      />
-      <TouchableOpacity
-              // onPress={() => navigation.push('signupScreen')}
-              style={styles.button}
-              >
-              <Text style={styles.buttonText}>Create Account</Text>
-      </TouchableOpacity>
-      </View>
+        <TextInput
+          style={styles.buttonVerificationInput}
+          placeholder="Enter your number here"
+          onChangeText={(newText) => setText(newText)}
+          defaultValue={text}
+        />
 
+        <TouchableOpacity
+          // onPress={() => navigation.push('signupScreen')}
+          style={styles.button}
+        >
+          <Text style={styles.buttonText}>Verify OTP</Text>
+        </TouchableOpacity>
+      </View>
     </View>
-  )
+  );
 }
 
-const styles = StyleSheet.create(
-    {
-        container : {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    color: mainColors.britishRacingGreen,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text: {
+    color: mainColors.britishRacingGreen,
+    fontWeight: "800",
+    fontSize: 25,
+    marginBottom: 10,
+  },
+  textVerficationDiv: {
+    width: "70%",
+  },
 
-            flex:1,
-            color: mainColors.mainColorGreen,
-            alignItems:'center',
-            justifyContent:'center',
-            
-        },
-        text:{
-            color:mainColors.mainColorPurple,
-            fontWeight:'800',
-            fontSize:25,
-            marginBottom:10,
-        },
-        textVerficationDiv:{
-          width:'70%',
-        },
+  textVerfication: {
+    textAlign: "center",
+    fontSize: 14,
+  },
+  textVerficationBold: {
+    fontWeight: "600",
+  },
+  button: {
+    backgroundColor: mainColors.britishRacingGreen,
+    padding:10,
+    marginTop: 20,
+    width: "70%",
+    height:50,
+    fontSize:30,
+    alignSelf: "center",
+    borderRadius: 10, // Set border radius as a percentage
+    elevation: 5, // This creates a shadow effect
+    shadowColor: 'black',
+    shadowOffset: { width: 4, height: 4 },
+    shadowOpacity: 0.4,
+    shadowRadius: 6,
+  },
+  buttonVerification: {
+    width: "100%",
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "600",
+    textAlign: "center",
+    fontSize:18,
+  },
+  buttonVerificationInput: {
+    height: 50,
+    textAlign:'center',
+    width: "70%",
+    marginTop:70,
+    borderWidth: 1,  // Set the width of the border
+    borderColor: 'black',  // Set the color of the border
+    borderRadius: 10,
+    alignSelf:'center',
+    fontSize:20,
+  },
 
-        textVerfication:{
-          textAlign:'center',
-          fontSize:14,
-        }, 
-        textVerficationBold:{
-          fontWeight:'600',
-        },
-        button: {
-          backgroundColor: mainColors.mainColorPurple,      
-          padding: 15,
-          marginTop: 80,
-          width: "70%",
-          alignSelf: "center",
-          borderRadius: 10, // Set border radius as a percentage
-          elevation: 5, // This creates a shadow effect
-          shadowColor: mainColors.mainGreyTest2,
-          shadowOffset: { width: 4, height: 4 },
-          shadowOpacity: 0.4,
-          shadowRadius: 4,
-        },
-        buttonVerification:{
-          width:'100%',
-        },
-        buttonText:{
-          color:'white',
-          fontWeight:'600',
-          textAlign:'center',
-        }
-    }
-)
+  // textIcon:{
+  
+  //   height:60,
+  // }
+});
