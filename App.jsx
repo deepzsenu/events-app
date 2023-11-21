@@ -5,6 +5,7 @@ import Verification from "./Screen/verification";
 const App = () => {
     return (
         <Verification/>
+            // <Home/>
     )
 }
 

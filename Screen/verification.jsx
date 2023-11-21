@@ -17,9 +17,9 @@ export default function Verification() {
   const [text, setText] = useState("");
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.textIcon}>
             <Text >
-            <FontAwesomeIcon  style={styles.textIcon}
+            <FontAwesomeIcon
             icon={faMobileAlt}
             size={50}  // Change the size as needed
             color={mainColors.britishRacingGreen}
@@ -47,10 +47,9 @@ export default function Verification() {
         />
 
         <TouchableOpacity
-          // onPress={() => navigation.push('signupScreen')}
           style={styles.button}
         >
-          <Text style={styles.buttonText}>Verify OTP</Text>
+          <Text style={styles.buttonText}>Send OTP</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -76,10 +75,11 @@ const styles = StyleSheet.create({
 
   textVerfication: {
     textAlign: "center",
-    fontSize: 14,
+    fontSize: 15,
   },
   textVerficationBold: {
     fontWeight: "600",
+    // justifyContent:'center',
   },
   button: {
     backgroundColor: mainColors.britishRacingGreen,
@@ -100,13 +100,15 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   buttonText: {
+    flex:1,
     color: "white",
     fontWeight: "600",
     textAlign: "center",
     fontSize:18,
+    justifyContent:'center',
   },
   buttonVerificationInput: {
-    height: 50,
+    height: 60,
     textAlign:'center',
     width: "70%",
     marginTop:70,
@@ -116,6 +118,9 @@ const styles = StyleSheet.create({
     alignSelf:'center',
     fontSize:20,
   },
+  textIcon:{
+    marginBottom:10,
+  }
 
   // textIcon:{
   
