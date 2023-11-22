@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     fontSize: 20,
-    // fontStyle: 'italic',
     textShadowColor: mainColors.mainGreyTest1,
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 2,

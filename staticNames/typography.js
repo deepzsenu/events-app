@@ -1,4 +1,4 @@
-export const typography = {
+const typography = {
     caption: {
       // termsAndAgreement, memberLabel
       fontFamily: 'Poppins-Regular',
@@ -80,4 +80,5 @@ export const typography = {
       fontSize: 32,
     },
   };
-  
+
+module.exports = typography
