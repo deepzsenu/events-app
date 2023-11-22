@@ -122,8 +122,4 @@ const styles = StyleSheet.create({
     marginBottom:10,
   }
 
-  // textIcon:{
-  
-  //   height:60,
-  // }
 });
