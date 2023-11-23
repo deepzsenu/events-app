@@ -7,6 +7,7 @@ import UserConfirmation from "./Screen/userconfirmation";
 import Hingecheck from "./Screen/hingecheck";
 
 import SignIn from "./Screen/signIn";
+import CurrentLocationScreen from "./Screen/currentLocationScreen";
 
 
 const App = () => {
@@ -15,8 +16,8 @@ const App = () => {
         // <Verification/>
         // <Hingecheck/>
         // <Home></Home>
-        <SignIn></SignIn>
-
+        // <SignIn></SignIn>
+        <CurrentLocationScreen></CurrentLocationScreen>
     )
 }
 

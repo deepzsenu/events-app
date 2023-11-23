@@ -8,7 +8,7 @@ export default function UserConfirmation() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={[mainColors.tailwindWhite, mainColors.tailWindBlue, mainColors.tailwindWhite, mainColors.tailwindpink, mainColors.tailwindWhite, mainColors.tailwindLightBlue, mainColors.tailwindWhite]}
+        colors={[mainColors.tailwindWhite, mainColors.tailWindBlue, mainColors.tailwindWhite, mainColors.tailwindPink, mainColors.tailwindWhite, mainColors.tailwindLightBlue, mainColors.tailwindWhite]}
         style={styles.gradientOverlay}
         start={{ x: 1, y: 0 }}
         end={{ x: 0, y: 1 }}
