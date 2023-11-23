@@ -124,7 +124,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
-
   signIn: {
     color: 'white',
     fontWeight: '600',
