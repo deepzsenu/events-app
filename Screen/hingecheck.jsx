@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Switch,} from 'react-native';
 import mainColors from '../staticNames/colors';
 import { LinearGradient } from "expo-linear-gradient";
-import { Picker } from '@react-native-picker/picker';
+
 
 const Hingecheck = () => {
 

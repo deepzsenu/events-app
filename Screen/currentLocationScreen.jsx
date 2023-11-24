@@ -1,15 +1,75 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+// import React, { useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
+
 import MapView from 'react-native-maps';
 import mainColors from '../staticNames/colors';
 import { LinearGradient } from "expo-linear-gradient";
 
+// import Geolocation from 'react-native-geolocation-service';
+
+// const requestLocationPermission = async () => {
+//   try {
+//     const granted = await PermissionsAndroid.request(
+//       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+//       {
+//         title: 'Geolocation Permission',
+//         message: 'Can we access your location?',
+//         buttonNeutral: 'Ask Me Later',
+//         buttonNegative: 'Cancel',
+//         buttonPositive: 'OK',
+//       },
+//     );
+//     console.log('Permission status:', granted);
+//     return granted === PermissionsAndroid.RESULTS.GRANTED;
+//   } catch (err) {
+//     console.error('Permission request error:', err);
+//     return false;
+//   }
+// };
+
 
 const CurrentLocationScreen = () => {
 
+  // const [location, setLocation] = useState(null);
+  // const [isMounted, setIsMounted] = useState(true);
+
+  // useEffect(() => {
+  //   return () => {
+  //     setIsMounted(false);
+  //   };
+  // }, []);
   const goToCurrentLocation = () => {
-    // Logic to access device's GPS and center the map
-  };
+
+  }
+
+
+  // const goToCurrentLocation = () => {
+  //   // Logic to access device's GPS and center the map
+  //   const result = requestLocationPermission();
+  //   result.then(res => {
+  //     console.log('res is:', res);
+  //     if (res) {
+  //       Geolocation.getCurrentPosition(
+  //         position => {
+  //           console.log(position);
+  //           setLocation(position);
+  //         },
+  //         error => {
+  //           // See error code charts below.
+  //           console.log(error.code, error.message);
+  //           setLocation(false);
+  //         },
+  //         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 },
+  //       );
+  //     }
+  //   })
+
+  // };
 
   return (
     <LinearGradient

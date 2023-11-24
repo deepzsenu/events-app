@@ -8,6 +8,9 @@ import Hingecheck from "./Screen/hingecheck";
 
 import SignIn from "./Screen/signIn";
 import CurrentLocationScreen from "./Screen/currentLocationScreen";
+import GenderPreference from "./Screen/genderPreference";
+import PreferenceSelector from "./Screen/Check";
+import ProfessionalInformation from "./Screen/professionalInformation";
 
 
 const App = () => {
@@ -15,9 +18,12 @@ const App = () => {
         // <UserConfirmation></UserConfirmation>
         // <Verification/>
         // <Hingecheck/>
+        // <GenderPreference></GenderPreference>
+        // <PreferenceSelector></PreferenceSelector>
         // <Home></Home>
         // <SignIn></SignIn>
-        <CurrentLocationScreen></CurrentLocationScreen>
+        <ProfessionalInformation></ProfessionalInformation>
+        // <CurrentLocationScreen></CurrentLocationScreen>
     )
 }
 

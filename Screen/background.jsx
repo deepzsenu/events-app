@@ -1,19 +1,25 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet, } from 'react-native'
 import React from 'react'
+import { LinearGradient } from "expo-linear-gradient";
+import mainColors from '../staticNames/colors';
 
 const Background = () => {
     return (
-        <View>
+        
             <LinearGradient
                 colors={[mainColors.tailwindWhite, mainColors.tailWindBlue, mainColors.tailwindWhite, mainColors.tailwindPink, mainColors.tailwindWhite, mainColors.tailwindLightBlue, mainColors.tailwindWhite]}
                 style={styles.gradientOverlay}
                 start={{ x: 1, y: 0 }}
                 end={{ x: 0, y: 1 }}
             >
-                <Text>Hello</Text>
             </LinearGradient>
-        </View>
     )
 }
 
 export default Background
+
+const styles = StyleSheet.create({
+    gradientOverlay: {
+        flex:1,
+    },
+  });
